@@ -1,0 +1,21 @@
+eureka:
+  instance:
+    #将来注册到注册中心的微服务包括注册中心都是用ip地址
+    preferIpAddress: true
+  client:
+    #是否注册到注册中心 注册中心自己不需要注册
+    registerWithEureka: true
+    #是否抓取注册中心的注册信息
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://192.168.153.132:8761/eureka/
+spring:
+  application:
+    name: empservice
+  datasource:
+    url: jdbc:mysql://localhost/mysql
+    username: root
+    password: ps123456
+    driver-class-name: com.mysql.jdbc.Driver
+server:
+  port: 8899
